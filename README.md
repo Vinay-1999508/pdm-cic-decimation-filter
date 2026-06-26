@@ -45,6 +45,7 @@ WAIT_HIGH: Drops the trigger and monitors tx_active. The moment the UART drops t
 SEND_LOW: Isolates the lower half of the register (saved_cic_data[7:0]), exposes it to the UART, and pulls the trigger again.
 
 WAIT_LOW: Waits for the lower byte transmission to finish, then returns to IDLE.
+
 ---
 
 ## 📐 System Architecture
