@@ -45,8 +45,6 @@ WAIT_HIGH: Drops the trigger and monitors tx_active. The moment the UART drops t
 SEND_LOW: Isolates the lower half of the register (saved_cic_data[7:0]), exposes it to the UART, and pulls the trigger again.
 
 WAIT_LOW: Waits for the lower byte transmission to finish, then returns to IDLE.
-
-Verification Proof: * Waveform Capture: (See image_735fff.png) The full system simulation demonstrates the entire pipeline working in unison. When the filter calculates 0x0010, you can visually trace the FSM waking up, dividing the data, and driving the tx_out pin to execute two completely distinct serial packet bursts back-to-back (0x00 burst followed by the 0x10 burst).
 ---
 
 ## 📐 System Architecture
